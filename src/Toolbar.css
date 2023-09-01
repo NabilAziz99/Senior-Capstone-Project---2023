@@ -1,0 +1,152 @@
+@import url('https://use.fontawesome.com/releases/v5.14.0/css/all.css');
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    /* Add this line */
+    position: relative;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+
+}
+
+
+
+
+.header-right-menu {
+    display: flex;
+    margin-left: 12px;
+
+
+
+
+}
+
+.header-left {
+    margin-left: 10px;
+    /* Add negative margin-left to move the image more to the left */
+}
+
+.header-left img {
+    width: 400px;
+    height: 300px;
+
+}
+
+
+
+.menu-item {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+    padding-top: 0;
+    /* Set padding-top to 0 or a smaller value */
+    margin-top: -15px;
+    /* Add negative margin-top to move the items further up */
+}
+
+
+.menu-item i {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover i,
+.sub-menu:hover+.menu-item i {
+    transform: rotate(180deg);
+}
+
+.sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+.sub-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu:hover {
+    display: block;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-box,
+.create-resume-box {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #2c23cf, #338a82);
+    color: #fdfdfd;
+    font-size: 14px;
+    /* smaller text size */
+    border-radius: 5px;
+    /* make the boxes rectangular */
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+.header-right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.login-box {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    /* change the background color to transparent */
+    color: #0c0c0c;
+    /* keep the text color as white */
+    font-size: 14px;
+    /* smaller text size */
+    border-radius: 5px;
+    /* keep the boxes rectangular */
+    border: 2px solid #4a4a4a;
+    /* keep the border */
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+
+.create-resume-box {
+    margin-right: 60px;
+    /* changed margin-right from 0 to 20px */
+}

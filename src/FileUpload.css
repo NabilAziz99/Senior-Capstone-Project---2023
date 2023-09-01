@@ -1,0 +1,302 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(12deg, rgb(146, 68, 209) 0%, rgb(94, 169, 231) 100%);
+}
+
+.intro-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    width: 80%;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.front-page-image {
+    position: absolute;
+    top: 15%;
+    left: 75%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    width: 40%;
+    height: auto;
+}
+
+
+
+
+.left-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.steps-box {
+    background-color: rgba(249, 249, 249, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.step-text {
+    font-size: 18px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(249, 249, 249, 0.8);
+    border-radius: 10px;
+    width: 100%;
+    border: 2px dashed #324afd;
+    /* Add dashed border */
+}
+
+.upload-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type='file'] {
+    margin-top: 20px;
+}
+
+.job-description {
+    position: absolute;
+    left: 3%;
+    width: 45.4%;
+    height: 40%;
+    background-color: rgba(249, 249, 249, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    /* Remove the previous transition property */
+    opacity: 0;
+    /* Set initial opacity to 0 */
+}
+
+.job-description.show {
+    animation: slide-up 1s ease forwards;
+    /* Add animation to the .show class */
+}
+
+@keyframes slide-up {
+    0% {
+        top: 70%;
+        /* Starting position */
+        opacity: 0;
+    }
+
+    100% {
+        top: 52%;
+        /* Ending position */
+        opacity: 1;
+    }
+}
+
+
+.job-description-text {
+    width: 99%;
+
+
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    height: 90%;
+
+}
+
+.job-description h2 {
+    margin-top: -8px;
+    /* Move the text up */
+    font-size: 16px;
+    /* Reduce the font size */
+
+}
+
+
+.resume-upload-icon {
+
+    margin-bottom: -30px;
+}
+
+
+/* Step 1 Icon - Upload */
+.step1-icon.inactive {
+    opacity: 0.3;
+}
+
+/*
+
+.step1-icon-bg {
+    position: absolute;
+    width: 80px;
+    height: 70px;
+
+    transform: translate(-3%, 1%);
+    background-color: rgba(45, 155, 122, 0.2);
+
+    border-radius: 30%;
+
+    transition: opacity 0.3s;
+}
+
+.step1-icon-bg.inactive {
+    opacity: 0;
+}
+*/
+/* Step 2 Icon - Paste */
+.step2-icon.inactive {
+    opacity: 0.3;
+    /* Inactive state opacity */
+}
+
+.step2-icon.active {
+    opacity: 1;
+    /* Active state opacity */
+}
+
+/*
+.step2-icon-bg {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transform: translate(5%, 15%);
+    background-color: rgba(246, 248, 112, 0.2);
+    border-radius: 50%;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.step2-icon-bg.active {
+    opacity: 0.8;
+}
+*/
+
+.step-line {
+    border-top: 2px dashed rgb(179, 170, 170);
+
+    width: 700px;
+    align-self: center;
+    margin-left: -75px;
+    margin-bottom: 15px;
+    margin-right: -75px;
+}
+
+
+.resume-preview {
+    position: absolute;
+    width: 27%;
+    height: 70%;
+    background-color: rgba(249, 249, 249, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0;
+    right: -100%;
+    transition: 1s;
+    margin-right: 8%;
+    margin-top: 23.5%;
+    position: relative;
+
+}
+
+.resume-preview.show {
+    opacity: 1;
+    right: 0;
+}
+
+.resume-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transition: 1s;
+}
+
+.button-container.show {
+    opacity: 1;
+}
+
+.ai-optimized-button {
+    width: 500px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #139edf, #dea126);
+    color: #fdfdfd;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+
+
+    /* Adjust this value to move the button to the left or right */
+
+}
+
+/* Add this to the existing CSS code */
+
+.button-container {
+    position: absolute;
+    bottom: 70px;
+    right: 100px;
+}
+
+
+.button-container.show {
+    opacity: 1;
+}
